@@ -8,8 +8,9 @@ from .forms import BlogPostForm, CommentForm
 # List Blog Posts
 def post_list(request):
     posts = BlogPost.objects.all()#.order_by('-created_at')
-    #print("I am in post_list")
+    #return HttpResponse("Welcome to the post_list!")
     return render(request, 'post_list.html', {'posts': posts})
+    #return render(request, 'testt.html') #, {'posts': posts}
 
 # View Blog Post Details
 def post_detail(request, id):

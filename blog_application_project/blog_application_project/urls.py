@@ -18,13 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
 
-# A simple view for the root URL
-def home_view(request):
-    return HttpResponse("Welcome to the Home Page!")
+
 
 urlpatterns = [
     path('', include('mini_blog_application.urls')),
     #path('', home_view, name='home'),
-    path('homee/', home_view, name='home'),
     path('admin/', admin.site.urls),
 ]
